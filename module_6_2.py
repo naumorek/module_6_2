@@ -64,7 +64,7 @@ vehicle1.print_info()
 '''
 class Vehicle:
 
-    __COLOR_VARIANTS=''
+    __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
 
     def __init__(self,owner,__model,__color,__engine_power):
         self.owner=owner #- владелец транспорта.(владелец  может меняться)
@@ -91,7 +91,7 @@ class Vehicle:
 
     def set_color(self,new_color):
         flag=True
-        print(self.__COLOR_VARIANTS)
+       
         for i in self.__COLOR_VARIANTS:
 
             if new_color.upper()==i.upper():
@@ -106,7 +106,6 @@ class Sedan(Vehicle):
 
 
 vehicle1 = Sedan('Fedos', 'Toyota Mark II', 'blue', 500)
-Vehicle.__COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
 # Изначальные свойства
 vehicle1.print_info()
 
@@ -114,6 +113,5 @@ vehicle1.print_info()
 vehicle1.set_color('Pink')
 vehicle1.set_color('BLACK')
 vehicle1.owner = 'Vasyok'
-print(dir(Vehicle))
 # Проверяем что поменялось
 vehicle1.print_info()
